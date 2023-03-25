@@ -183,10 +183,16 @@ form{
     #navbar-secondary img{
         max-width: 17rem;
     }
+    #navbar-secondary i{
+        margin-right: 2rem;
+    }
 }
 
 @media (max-width: 480px){
     #navbar-secondary img{
         max-width: 15rem;
+    }
+    #navbar-secondary i{
+        margin-right: 2rem;
     }
 }
