@@ -32,7 +32,7 @@ body{
     "header"
     "main"
     "footer";
-    grid-template-rows: 10rem 1fr 10rem;
+    grid-template-rows: 10rem 1fr 5rem;
 }
 
 #page-topbar{
@@ -180,6 +180,9 @@ form{
 }
 
 @media (max-width: 600px){
+    body{
+        grid-template-rows: 9rem 1fr 5rem;
+    }
     #navbar-secondary img{
         max-width: 17rem;
     }
