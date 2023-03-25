@@ -1,0 +1,192 @@
+:root{
+    --font-color-primary: #495057;
+    --font-color-secondary: #505D69;
+    --primary: #2fa97c;
+    --border-color: #ced4da;
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    font-family: "Nunito sans",sans-serif;
+    color: var(--font-color);
+}
+
+body{
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 10rem 1fr 10rem;
+}
+
+#page-topbar{
+    grid-area: header;
+    background-color: var(--primary);
+    padding-top: 0.6rem;
+}
+
+#navbar{
+    height: 100%;
+    padding-inline: 2rem;
+
+
+    background-image: url("./assets/bg-pattern.png");
+    background-position-y: 5rem;
+    background-size: cover;
+}
+
+#logo-primary{
+    max-width: 24rem;
+}
+
+#navbar-secondary{
+    display: none;
+}
+
+
+main{
+    grid-area: main;
+    margin: 0 auto;
+}
+
+#card-body{
+    max-width: 43rem;
+    padding: 1.25rem;
+    margin-top: -2rem;
+
+    background-color: #fff;
+    border-radius: 0.25rem;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1.5rem;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h4{
+    color: var(--font-color-primary);
+    font-size: 1.365rem;
+    font-weight: 600;
+}
+
+h4::after{
+    display: block;
+    margin-block: 1.5rem;
+    content: " ";
+    width: 100%;
+    height: 0.05rem;
+    background-color: rgba(0,0,0,.1);
+}
+
+label{
+    color: var(--font-color-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+select, input, button{
+    padding: 0.5rem 0.5rem;
+    border: 1px solid var(--border-color);
+    color: var(--font-color-primary);
+    font-size: 1.1375rem;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    width: 12.5rem;
+    height: 2.9rem;
+    border-radius: 0.5rem;
+}
+
+
+button{
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: var(--primary);
+    width: 9.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Hide Arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide Arrows Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+}
+
+@media (max-width: 768px){
+
+#logo-primary{
+    display: none;
+}
+
+#navbar-secondary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar-secondary i{
+    margin-right: 5rem;
+}
+
+#navbar-secondary img{
+    max-width: 20rem;
+}
+
+form{
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+@media (max-width: 600px){
+    #navbar-secondary img{
+        max-width: 17rem;
+    }
+}
+
+@media (max-width: 480px){
+    #navbar-secondary img{
+        max-width: 15rem;
+    }
+}
