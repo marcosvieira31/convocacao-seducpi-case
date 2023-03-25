@@ -190,7 +190,7 @@ form{
 
 @media (max-width: 480px){
     #navbar-secondary img{
-        max-width: 15rem;
+        max-width: 13rem;
     }
     #navbar-secondary i{
         margin-right: 2rem;
