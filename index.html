@@ -32,15 +32,16 @@
                     <label for="select-edital">EDITAL</label>
                     <select name="" id="select-edital">
                         <option value="">SELECIONAR</option>
+                        <option value="">08/2021 - 5ª Chamada</option>
                     </select>
                 </section>
 
                 <section>
                     <label for="input-cpf">CPF</label>
-                    <input type="number" name="" id="input-cpf">
+                    <input name="" id="input-cpf" maxlength="14">
                 </section>
 
-                <button>CONTINUAR</button>
+                <button type="submit">CONTINUAR</button>
             </form>
         </div>
     </main>
@@ -49,3 +50,18 @@
     </footer>
 </body>
 </html>
+
+<script>
+
+const cpfInput = document.querySelector('#input-cpf');
+  cpfInput.addEventListener('input', applyCpfMask);
+
+  function applyCpfMask() {
+    let value = cpfInput.value.replace(/\D/g, '');
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d{1,2})/, '$1-$2');
+    cpfInput.value = value;
+  }
+    
+</script>
